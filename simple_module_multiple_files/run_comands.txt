@@ -1,0 +1,14 @@
+To Build and Insert the module in Kernel:
+-make -C /lib/modules/$(uname -r)/build M=$PWD clean
+
+-make -C /lib/modules/$(uname -r)/build M=$PWD modules
+
+-sudo insmod simple_module_multiple_files.ko
+
+-sudo rmmod simple_module_multiple_files.ko
+
+
+
+To Check the logs:
+-sudo tail -f /var/log/syslog | grep kernel
+

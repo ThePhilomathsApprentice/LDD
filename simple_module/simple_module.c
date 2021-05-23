@@ -3,17 +3,17 @@
 
 MODULE_LICENSE("GPL");
 
-int ex01_simple_module_init(void)
+int simple_module_init(void)
 {
  printk(KERN_ALERT "Inside the %s Function\n", __FUNCTION__ );
  return 0;
 }
 
-void ex01_simple_module_exit(void)
+void simple_module_exit(void)
 {
  printk(KERN_ALERT "Inside the %s Function\n", __FUNCTION__ );
 
 }
 
-module_init(ex01_simple_module_init);
-module_exit(ex01_simple_module_exit);
+module_init(simple_module_init);
+module_exit(simple_module_exit);
